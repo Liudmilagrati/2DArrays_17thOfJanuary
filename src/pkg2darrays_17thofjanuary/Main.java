@@ -42,7 +42,21 @@ public class Main {
        
         String[] stringArray = new String[10];
         System.out.println(stringArray[4]); // default value will be null 
-                
+        
+       // Nested loops  
+        System.out.println(AnotherArray); // will print teh memory location and not teh values in the arry 
+    
+        //to look at the values in teh array we need a nested loop 
+        
+        for (int row=0; row<AnotherArray.length; row++) { //use AnotherArray.length instead of a number 4 size in this case 
+            System.out.println(AnotherArray[row]); // will get teh memory address
+         
+            for (int col=0; col<AnotherArray[row].length; col++) {
+                System.out.println(AnotherArray[row][col]);
+            }  
+        }
+        
+        
     }
     
 }
